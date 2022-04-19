@@ -34,7 +34,7 @@ include('smtp/PHPMailerAutoload.php');
         <input type="submit" value="Submit" name="submit">
 
         <?php
-		 $conn = mysqli_connect("localhost", "id16328974_root", "Anonymou$9895", "id16328974_bidding_wars");
+		 $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars");
 		if (!$conn) {
 			die("Connection Failed:" . mysqli_connect_error());
 		} else {
