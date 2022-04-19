@@ -80,36 +80,7 @@ include('smtp/PHPMailerAutoload.php');
                     $_SESSION['pwd'] = $pwd;
                     $_SESSION['otp'] = $otp;
 
-                    $subject = "OTP Verification";
-                    $body = "$uname,Welcome to Bidding Wars. Your OTP for registration is, $otp";
-                    function smtp_mailer($email, $subject, $body)
-                    {
-                        $mail = new PHPMailer();
-                        $mail->SMTPDebug  = 3;
-                        $mail->IsSMTP();
-                        $mail->SMTPAuth = true;
-                        $mail->SMTPSecure = 'tls';
-                        $mail->Host = "smtp.gmail.com";
-                        $mail->Port = 587;
-                        $mail->IsHTML(true);
-                        $mail->CharSet = 'UTF-8';
-                        $mail->Username = "biddingwars.tk@gmail.com";
-                        $mail->Password = "June@2218";
-                        $mail->SetFrom("biddingwars.tk@gmail.com");
-                        $mail->Subject = $subject;
-                        $mail->Body = $body;
-                        $mail->AddAddress($email);
-                        $mail->SMTPOptions = array('ssl' => array(
-                            'verify_peer' => false,
-                            'verify_peer_name' => false,
-                            'allow_self_signed' => false
-                        ));
-                        if (!$mail->Send()) {
-                            echo $mail->ErrorInfo;
-                        } else {
-                            echo "<script>window.location.href='VerifyOTP.php'</script>";
-                        }
-                    }
+
 
                     $emailquery = "SELECT *FROM registration where email = '$email' ";
                     $query = mysqli_query($conn, $emailquery);
@@ -125,9 +96,18 @@ include('smtp/PHPMailerAutoload.php');
                             echo "<br><h3>Username is already Taken</h3>";
                         } else {
                             $sql = "INSERT into registration values ('$uname', '$fname', '$mname', '$lname', '$dob', '$gender', '$room_no', '$locality', '$station', '$pincode', '$state', '$phone', '$email', '$pwd', '$status')";
-                            echo smtp_mailer($email, $subject, $body);
+
                             if ($conn->query($sql) === TRUE) {
-                                echo "<script>window.location.href='VerifyOTP.php'</script>";
+                                $update = "UPDATE registration SET status = 'verified' where email = '$email'";
+                                if ($conn->query($update) === TRUE) {
+                                    $log = "INSERT INTO login(email, uname, pwd) VALUES ('$email', '$uname', '$pwd')";
+                                    if ($conn->query($log) === TRUE) {
+                                        $mssg = urldecode("$uname, You have been succesfully registered");
+                                        header("Location:/index.php?Message=" . $mssg);
+                                    } else {
+                                        echo "Error :" . $log . "<br>" . $conn->error;
+                                    }
+                                }
                             }
                         }
                     }
