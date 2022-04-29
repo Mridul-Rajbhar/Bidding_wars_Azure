@@ -1,7 +1,8 @@
 <?php
 session_start();
 $productID = $_SESSION["ProductID"];
-$conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars");
+$port = $_SERVER['WEBSITE_MYSQL_PORT'];
+$conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
 $query1 = "SELECT * FROM $productID WHERE UserName!='DummyUser' ORDER BY Highest_Bid DESC";
 $result1 = mysqli_query($conn,$query1);
 $output="";
@@ -31,4 +32,3 @@ else
 {
     echo 0;
 }
-?>

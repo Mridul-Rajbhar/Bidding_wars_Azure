@@ -16,7 +16,9 @@ $Username = $_SESSION["uname"];
     <p id="totalBidTime"></p>
     <div style="text-align:center;">
         <?php
-        $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars") or die("Conncetion Failed");
+
+        $port = $_SERVER['WEBSITE_MYSQL_PORT'];
+        $conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
         $sql1 = "SELECT * FROM $productId WHERE UserName='$Username'";
 
         $sql4 = "SELECT * FROM items WHERE product_id='$productId'";

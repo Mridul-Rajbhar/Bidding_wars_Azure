@@ -12,7 +12,8 @@
 <body>
 
     <?php
-    $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars");
+    $port = $_SERVER['WEBSITE_MYSQL_PORT'];
+    $conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
     if (!$conn) {
         die("Connection Failed:" . mysqli_connect_error());
     } else {

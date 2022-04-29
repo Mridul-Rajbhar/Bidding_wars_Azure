@@ -23,7 +23,8 @@ $username = $_SESSION['uname'];
     </div>
 
     <?php
-    $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars");
+    $port = $_SERVER['WEBSITE_MYSQL_PORT'];
+    $conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
     $sql = "SELECT *FROM registration where uname ='$username' ";
     $query = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($query);

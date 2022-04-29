@@ -16,8 +16,8 @@ $Username = $_SESSION['uname'];
 <body>
 
     <?php
-
-    $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars") or die("Conncetion Failed");
+    $port = $_SERVER['WEBSITE_MYSQL_PORT'];
+    $conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
     ?>
 
     <div class="navigation">

@@ -17,8 +17,8 @@ $userName = $_SESSION["uname"];
     <?php
 
 
-
-    $conn = mysqli_connect("127.0.0.1:50949", "azure", "6#vWHD_$", "bidding_wars") or die("Conncetion Failed");
+    $port = $_SERVER['WEBSITE_MYSQL_PORT'];
+    $conn = mysqli_connect("127.0.0.1:$port", "azure", "6#vWHD_$", "bidding_wars");
     $sql4 = "SELECT * FROM items WHERE status='available' and product_id='$productId'";
     $query4 = mysqli_query($conn, $sql4);
     $Day = "";
