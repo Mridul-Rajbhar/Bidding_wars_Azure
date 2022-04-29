@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'BiddingWars10'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19DBF137F48144A5AE3E6986887C50EB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_11B7EF0A62974EB6A3499AD8659C279F }}
           package: .
