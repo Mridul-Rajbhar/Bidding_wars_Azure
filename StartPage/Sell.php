@@ -18,7 +18,7 @@ session_start();
 <body>
     <div>
         <ul>
-            <li><a href="/StartPage.php">Home</a></li>
+            <li><a href="/StartPage/StartPage.php">Home</a></li>
             <li><a href="/Contact.php">Contact</a></li>
             <li><a href="/Rules.html">Rules</a></li>
             <li><a href="/index.php">Log Out</a></li>
@@ -55,18 +55,6 @@ session_start();
                         if (in_array($fileType, $allowTypes)) {
                             $image = $_FILES['upload_product']['tmp_name'];
                             $imgContent = addslashes(file_get_contents($image));
-
-
-                            // $time_query = "SELECT *FROM auction_slot where date = '$date' and Hours ='$Hour' and Minutes ='$Minutes'";
-                            // $query = mysqli_query($conn, $time_query);
-                            // $count = mysqli_num_rows($query);
-                            // if ($count > 0){
-                            //     echo "<h3><b>Slot Not Available</b></h3>";
-                            // }
-                            // else{
-                            //     $slot = "INSERT into auction_slot values ('$date','$Hour','$Minutes')";
-                            //     if ($conn ->query($slot) === TRUE)
-                            //     {
 
                             $sql = "INSERT INTO items (name_product,info_product,type_product,upload_product,date,Hours,Minutes,product_id,status,people_joined_bid,seller_name,baseID) values ('$name','$info','$type','$imgContent','$date','$Hour','$Minutes', '$id','available','0','$sellerName','$basePrice')";
 

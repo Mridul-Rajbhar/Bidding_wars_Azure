@@ -22,7 +22,7 @@ $Username = $_SESSION['uname'];
 
     <div class="navigation">
         <ul>
-            <li><a href="/Profile/Profile.php">My Profile</a></li>
+            <li><a href="StartPage/Profile/Profile.php">My Profile</a></li>
             <li><a href="/Contact.php">Contact</a></li>
             <li><a href="/Rules.html">Rules</a></li>
             <li><a href="/index.php">Log Out</a></li>

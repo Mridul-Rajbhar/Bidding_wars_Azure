@@ -12,7 +12,7 @@
     <div class="navigation">
         <div class="top-right">
             <ul>
-                <li><a href="/StartPage.php">Home</a></li>
+                <li><a href="StartPage/StartPage.php">Home</a></li>
                 <li><a href="/Rules.html">Rules</a></li>
             </ul>
         </div>
