@@ -12,8 +12,8 @@
     <div class="navigation">
         <div class="top-right">
             <ul>
-                <li><a href="StartPage.php">Home</a></li>
-                <li><a href="Rules.html">Rules</a></li>
+                <li><a href="/StartPage.php">Home</a></li>
+                <li><a href="/Rules.html">Rules</a></li>
             </ul>
         </div>
     </div>
@@ -61,7 +61,7 @@
 
                     if ($conn->query($sql) === TRUE) {
                         $mssg = urldecode("$name, Your Query Has Been Registered");
-                        header("Location:http://biddingwars.tk/StartPage/StartPage.php?Message=" . $mssg);
+                        header("Location:https://biddingwars12.azurewebsites.net/StartPage/StartPage.php?Message=" . $mssg);
                     } else {
                         //echo "Error :" . $sql . "<br>" . $conn->error;
                     }

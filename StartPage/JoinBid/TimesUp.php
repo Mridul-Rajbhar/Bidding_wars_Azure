@@ -3,7 +3,7 @@
 <head>
     <title>Join Bid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/joinBid.css">
+    <link rel="stylesheet" href="/CSS/joinBid.css">
 </head>
 <?php
 session_start();
@@ -20,13 +20,13 @@ if ($querytm) {
             $money = 0;
             $_SESSION["winner"] = $winner;
             $_SESSION["money"] = $money;
-            echo "<script>window.location.href='http://biddingwars.tk/StartPage/JoinBid/Winner.php'</script>";
+            echo "<script>window.location.href='StartPage/JoinBid/Winner.php'</script>";
         } else {
             $winner = $row["Status"];
             $money = $row["Highest_Bid"];
             $_SESSION["winner"] = $winner;
             $_SESSION["money"] = $money;
-            echo "<script>window.location.href='http://biddingwars.tk/StartPage/JoinBid/Winner.php'</script>";
+            echo "<script>window.location.href='StartPage/JoinBid/Winner.php'</script>";
         }
     }
 } else {

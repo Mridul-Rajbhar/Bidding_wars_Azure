@@ -8,7 +8,7 @@ $username = $_SESSION['uname'];
 <head>
     <title>My Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/Profile.css">
+    <link rel="stylesheet" href="/CSS/Profile.css">
 </head>
 
 <body>
@@ -17,8 +17,8 @@ $username = $_SESSION['uname'];
         <ul>
             <li><a href="/StartPage/StartPage.php">Home</a></li>
             <li><a href="/StartPage/Contact.php">Contact</a></li>
-            <li><a href="http://biddingwars.tk/StartPage/Rules.html">Rules</a></li>
-            <li><a href="http://biddingwars.tk">Log Out</a></li>
+            <li><a href="/StartPage/Rules.html">Rules</a></li>
+            <li><a href="/">Log Out</a></li>
         </ul>
     </div>
 

@@ -10,7 +10,7 @@ $userName = $_SESSION["uname"];
 <head>
     <title>Time Remaining For Bid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/TimeRemaingForBid.css">
+    <link rel="stylesheet" href="/CSS/TimeRemaingForBid.css">
 </head>
 
 <body>

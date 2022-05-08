@@ -4,15 +4,15 @@
 <head>
     <title>Buy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/Buy.css">
+    <link rel="stylesheet" href="/CSS/Buy.css">
 </head>
 
 <body>
     <ul>
         <li><a href="/StartPage/StartPage.php">Home</a></li>
         <li><a href="/StartPage/Contact.php">Contact</a></li>
-        <li><a href="http://biddingwars.tk/StartPage/Rules.html">Rules</a></li>
-        <li><a href="http://biddingwars.tk">Log Out</a></li>
+        <li><a href="/StartPage/Rules.html">Rules</a></li>
+        <li><a href="/">Log Out</a></li>
     </ul>
     <h3>
         <p style="text-align:center;">

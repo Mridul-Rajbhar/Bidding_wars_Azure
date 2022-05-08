@@ -10,7 +10,7 @@ $UserName = $_SESSION["uname"];
 <head>
     <title>Winner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/Winner.css">
+    <link rel="stylesheet" href="/CSS/Winner.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,200" rel="stylesheet" type="text/css">
 </head>
 
@@ -19,10 +19,10 @@ $UserName = $_SESSION["uname"];
     <div class="nav">
         <div class="top">
             <ul>
-                <li style="float: right;"><a href="http://biddingwars.tk/StartPage/Rules.html">Rules</a></li>
-                <li style="float: right;"><a href="http://biddingwars.tk/StartPage/Contact.php">Contact</a></li>
-                <li style="float: right;"><a href="http://biddingwars.tk/StartPage/StartPage.php">Home</a></li>
-                <list style="float: left;"><a href="http://biddingwars.tk/StartPage/StartPage.php"><img src="http://biddingwars.tk/CSS/logo.jpg" height="60px"></a></list>
+                <li style="float: right;"><a href="/StartPage/Rules.html">Rules</a></li>
+                <li style="float: right;"><a href="/StartPage/Contact.php">Contact</a></li>
+                <li style="float: right;"><a href="/StartPage/StartPage.php">Home</a></li>
+                <list style="float: left;"><a href="/StartPage/StartPage.php"><img src="/CSS/logo.jpg" height="60px"></a></list>
             </ul>
         </div>
     </div>

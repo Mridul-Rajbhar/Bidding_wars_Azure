@@ -9,7 +9,7 @@ $Username = $_SESSION["uname"];
 <head>
     <title>Join Bid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://biddingwars.tk/CSS/joinBid.css">
+    <link rel="stylesheet" href="/CSS/joinBid.css">
 </head>
 
 <body>
@@ -123,27 +123,7 @@ $Username = $_SESSION["uname"];
 
 
         $(document).ready(function() {
-            // 
-            //     $sql7 = "SELECT * FROM $productId WHERE Username ='DummyUser' ";
-            //     $query7 = mysqli_query($conn,$sql7);
 
-            //     if($query7)
-            //     {
-            //         $Correct = "yes";
-
-            //     }
-            //     else
-            //     {
-            //         $Correct = "no";
-            //     }
-            // 
-
-
-            // var permission = ' echo $Correct';
-            // //console.log(permission);
-            // if(permission == "yes")
-            // {
-            //console.log("Yse");
             function callHighestBid() {
                 $.ajax({
                     url: "highestBid.php",

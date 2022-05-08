@@ -12,8 +12,8 @@
     <div class="navigation">
         <div class="top-right">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="Rules.html">Rules</a></li>
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/Rules.html">Rules</a></li>
             </ul>
         </div>
     </div>
