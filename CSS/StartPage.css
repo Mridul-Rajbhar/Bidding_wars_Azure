@@ -4,23 +4,30 @@ body{
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg");
     background-size: 100% ;
     background-repeat:no-repeat;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
     overflow: scroll;
    
   }
   .Form{
-    
     background: #f8f4e5;
-    padding: 50px 180px 120px;
+    width: 50%;
     border-top: 10px solid #f45702;
     font-size: 20px;
     font-family: Tw Cen MT  ;
     color: #2A293E;
-    position: fixed;
-    margin-left: 21%;
-    margin-top: 3%;
+    position:relative;
+    margin:2% auto;
     border-bottom: 10px solid #f45702;
+  }
+  
+  #Sell, #Buy, #JoinBid
+  {
+    width: 50%;
+    position: relative;
+    margin:5% auto;
+
   }
 
   ul {
